@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "font-titulos-sections";
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf) format(truetype); 
+}
+
+@font-face {
+    font-family: "font-menu";
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf) format(truetype); 
+}
