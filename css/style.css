@@ -1,181 +1,215 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(26,41,58);
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  background-color: rgb(23, 29, 37);
+  padding: 1rem 0;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.logo-link img {
+  height: 50px;
+  width: auto;
+}
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.menu_pag {
+  font-family: "font-menu";
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu_pag a {
+  color: rgb(242, 242, 242);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu_pag a:hover {
+  color: rgb(26,159,255);
+  text-decoration: underline;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(103, 112, 123, 0.2);
+  color: rgb(197,195,192);
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: rgba(103, 112, 123, 0.4);
+}
+
+#notifications_steam {
+  color: rgb(197,195,192);
+  position: relative;
+  white-space: nowrap;
+}
+
+#notifications_steam img{
+  width: 25px;
+  border-radius: 30%;
+  background-color: rgba(103, 112, 123, 0.2);
+}
+
+#notification-content {
+  color: rgb(197, 195, 192);
+  font-family: sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 15px;
+  position: absolute;
+  font-weight: 100;
+  background-color: rgba(23, 29, 37, 0.9); 
+  border-radius: 5px; 
+  max-width: 300px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.featured-games {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.carousel {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.03);
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgb(23, 29, 37);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-title{
+  color: rgb(242, 242, 242);
+  text-align: center;
+  padding: 10px 0 30px 0;
+  font-family: "font-titulos-sections";
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.form-group label, h2{
+  color: rgb(242, 242, 242);
+  font-family: "font-menu";
+}
+
+#tit_form{
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: rgb(26,41,58);
+  color: rgb(242, 242, 242);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  font-family: "font-menu";
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(26, 135, 213);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(15, 179, 255);
+}
+
+.footer-bottom {
+  color: rgb(104, 104, 104);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+      flex-direction: column;
+      gap: 1rem;
   }
 
-    body{
-      background-color: rgb(26,41,58);
-      overflow-x: hidden;
-    }
-
-    header{
-      background-color: rgb(23, 29, 37);
-      display: flex;
-      align-items: center;
+  .menu_pag {
+      flex-wrap: wrap;
       justify-content: center;
+  }
 
-    }
-    .header__container{
+  .user-actions {
       width: 100%;
-      display: flex;
-      height: 13vh;
-      align-items: center;
-    }
-    
-    #ico-div {
-      display: flex;
-      flex-basis: 0;
-      flex-grow: 1;
-      padding-left: 14px;
-      padding-top: 2px;
-      margin-left: 2vh;
       justify-content: center;
-    }
-
-    #ico_horizontal{
-      display: flex;
-      height: 8vh;
-      max-height: 80px;
-    }
-
-
-    .menu_pag{
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      flex-basis: 0;
-      flex-grow: 1;
-    }
-    .menu_user{
-      display: flex;
-      flex-basis: 0;
-      flex-grow: 2.2;
-    }
-
-    #download_steam{
-      color: rgb(197,195,192);
-      background-color: rgba(103, 112, 123, 0.2);
-      font-family: sans-serif;
-      text-transform: capitalize;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      font-size: 12px;
-      padding: 3px 10px 3px 9px;
-      margin-left: 5vh;
-      font-weight: 100;
-    }
-
-    #download_steam img{
-      padding-right: 10px;
-    }
-
-    #notifications_steam {
-      color: rgb(197,195,192);
-      margin-right: 70vh;
-      position: relative;
-      white-space: nowrap;
-    }
-
-    #notifications_steam img{
-      width: 18px;
-      background-color: rgba(103, 112, 123, 0.2);
-    }
-
-    #notificaciones_txt{
-      color: rgb(197,195,192);
-      font-family: sans-serif;
-      text-transform: capitalize;
-      text-decoration: none;
-      font-size: 12px;
-      padding: 3px 10px 3px 9px;
-      position: absolute;
-      font-weight: 100;
-    }
-
-    .menu_pag a{
-      color: rgb(237, 237, 237);
-      padding-left: 10px;
-      text-decoration: none;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: "font-menu";
-      font-size: 15px;
-      font-weight: bolder;
-      transition: color 0.3s ease;
-    }
-    .menu_pag a:hover {
-      text-decoration: underline 2px;
-      color: rgb(26,159,255) ;
-    }
-
-    .tit_sec{
-      font-family: "font-titulos-sections";
-      font-size: 25px;
-      text-align: center;
-      color: rgb(242, 242, 242);
-      text-transform: uppercase;
-      padding-top: 20px;
-      padding-bottom: 30px;
-    }
-
-    #carouselExampleCaptions {
-      display: flex;
-      max-width: 70%;
-      max-height: 40vw;
-      overflow: hidden;
   }
-  
+}
 
-    .carousel-item {
-      cursor: pointer;
-    }
-
-    .control-carousel {
-      width: 4%;
-      height: 20%;
-      margin-top: 230px;
-    }
-
-    .carousel-control-next{
-      background: linear-gradient(to left, rgb(19, 19, 19), transparent);
-    }
-
-    .carousel-control-next:hover{
-      background: linear-gradient(to left, rgba(219, 219, 219, 0.345), rgba(19, 19, 19, 0.039));
-    }
-
-    .carousel-control-prev{
-      background: linear-gradient(to right, rgb(19, 19, 19), transparent);
-    }
-
-    .carousel-control-prev:hover{
-      background: linear-gradient(to right, rgba(219, 219, 219, 0.345), rgba(19, 19, 19, 0.039));
-    }
-
-
-
-
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      margin-left: 0;
-    }
-    
-    .header-text {
-      margin-left: 60px; /* ajusta este valor para mover el texto a la derecha */
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    
-    .header-text > * {
-      margin-right: 20px;
-    }
